@@ -5,12 +5,20 @@ nav {
 	margin: 0 auto;
 	background-color: @nav-bg;
 	border-bottom: 2px solid @nav-border;
+
+	@media @phone {
+		width: 100%;
+	}
 	
 	h1 {
 		font-size: 40px;
 		width: 20%;
 		margin: 0 auto;
 		padding: 20px 0;
+
+		@media @phone {
+			width: 70%;
+		}
 	}
 
 	.links {
@@ -19,10 +27,16 @@ nav {
 		padding-bottom: 15px;
 		
 		a {
-			font-size: 16px;
-			text-decoration: none;
-			color: @nav-font;
-			padding: 0 20px;
+			.nav-links;
+
+			@media @phone {
+				font-size: 14px;
+			}
+		}
+
+		@media @phone {
+			display: flex;
+			justify-content: flex-start;
 		}
 	}
 }
